@@ -82,7 +82,7 @@ contract SafeToken {
         notify(msg.sender, owner, 100);
     }
 
-    function transferT(address _receiver, uint256 _amount) external {
+    function transfer(address _receiver, uint256 _amount) external {
         require(balances[msg.sender] >= _amount,'balance not enough');
 
         balances[msg.sender] -= _amount;
